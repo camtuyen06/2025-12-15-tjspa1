@@ -15,7 +15,7 @@ interface IButtonProps{
 // entre {} on met de javascript
 const Button=({children,onButtonClick,bgColor="red", type="button"}:IButtonProps) => {
     //console.log(style);
-    console.trace(children);
+    //console.trace(children);
     return (
     <button 
         type ={type}
