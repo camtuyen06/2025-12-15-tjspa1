@@ -1,15 +1,28 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Button from "../components/ui/Button/Button";
 
-function App() {
- const [counter, setcounter] = useState(0);
+const App: React.FC<undefined> = () => {
+  const [counter, setCounter] = useState(-100);
+  useEffect(() => {
+    //componentDidMount
+    console.log('didMount');
+    setCounter(0);
+    
+    return () => {
+      //componentWillUnmount
+    };
+  }, []);
+  useEffect(() => {
+    console.log('counter effect',counter);
+  }, [counter]);
+
   return (
     <div style={{ textAlign: "center" }}>
       valeur de counter :{counter}
       <hr />
       <Button
         onButtonClick={() => {
-          setcounter(counter -1);
+          setCounter(counter - 1);
           console.log(counter);
         }}
       >
@@ -18,7 +31,8 @@ function App() {
       <Button
         bgColor="skyblue"
         onButtonClick={() => {
-          setcounter(counter +1);
+          setCounter(counter + 1);
+
           console.log(counter);
         }}
       >
@@ -26,6 +40,6 @@ function App() {
       </Button>
     </div>
   );
-}
+};
 
 export default App;
