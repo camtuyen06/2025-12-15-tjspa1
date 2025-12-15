@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import style from './Button.module.css';
 
 //interface pour verifier le type
@@ -16,19 +16,23 @@ interface IButtonProps{
 const Button=({children,onButtonClick,bgColor="red", type="button"}:IButtonProps) => {
     //console.log(style);
     //console.trace(children);
+    const [isCliked, setisCliked] = useState(false);
     return (
     <button 
         type ={type}
         className={style.Button}
         style={{backgroundColor:bgColor}}
         onClick={() => {
-            //traitement evvent
+            //traitement event
+            setisCliked(true);
             if(onButtonClick){
                  onButtonClick()
             }
         }}
     >
         {children}
+
+        {isCliked.toString()}
     </button>
     );
 };
