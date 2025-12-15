@@ -10,14 +10,23 @@ function App() {
             onButtonClick={(param)=>{
             console.log("j'ai ckiqué sur benjamin", param)
          }}
-      />
+         >
+            benjamin
+         </Button>
 
-      <Button title="ok" bgColor="aquamarine"
-       onButtonClick={(param)=>{
+         <Button title="ok" bgColor="aquamarine"
+            onButtonClick={(param)=>{
             console.log("j'ai ckiqué sur ok", param)
-         }}></Button>
+         }}
+         >
+            <div>cancel</div>
+         </Button>
 
-      <Button title="cancel"></Button>
+
+         <Button>
+            <div>3eme</div>
+            <div>button</div>
+         </Button>
 
       
     </div>
