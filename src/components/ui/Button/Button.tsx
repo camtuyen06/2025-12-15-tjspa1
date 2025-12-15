@@ -2,6 +2,7 @@ import React from 'react';
 import style from './Button.module.css';
 
 //interface pour verifier le type
+//remarque <div> c'est children
 interface IButtonProps{
     children:string|React.ReactElement|Array<string|React.ReactElement>;
     onButtonClick?:()=>void;
