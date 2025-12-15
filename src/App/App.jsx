@@ -3,7 +3,7 @@ import Button from "../components/ui/Button/Button";
 function App() {
   return (
     <div>
-      DEMAT BREITZ
+      DEMAT BREIZH
       <br />
          <Button title={"benjamin"}
             onButtonClick={(param)=>{
