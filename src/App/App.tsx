@@ -5,28 +5,29 @@ function App() {
     <div>
       DEMAT BREIZH
       <br />
-         <Button title={"benjamin"}
+         <Button 
             bgColor="tomato"
-            onButtonClick={(param)=>{
-            console.log("j'ai ckiqué sur benjamin", param)
+            onButtonClick={()=>{
+            console.log("j'ai cliqué sur benjamin")
          }}
          >
             benjamin
          </Button>
 
-         <Button title="ok" bgColor="aquamarine"
-            onButtonClick={(param)=>{
-            console.log("j'ai ckiqué sur ok", param)
+         <Button bgColor="aquamarine"
+            onButtonClick={()=>{
+            console.log("j'ai cliqué sur ok")
          }}
          >
             <div>cancel</div>
          </Button>
 
-
          <Button>
             <div>3eme</div>
             <div>button</div>
          </Button>
+
+        //remarque div c'est pour children
 
       
     </div>
