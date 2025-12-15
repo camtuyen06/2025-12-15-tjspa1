@@ -1,7 +1,15 @@
 
-const Button=({title}) => {
+const Button=({title,onButtonClick}) => {
     console.log(title);
-    return <div>{title}</div>
-}
+    return (
+    <div className="Button"
+        onClick={(evt) => {
+            onButtonClick(title)
+        }}
+    >
+    {title}
+    </div>
+    );
+};
 
 export default Button;

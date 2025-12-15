@@ -5,10 +5,20 @@ function App() {
     <div>
       DEMAT BREITZ
       <br />
-      <Button title="benjamin"></Button>
-      <Button title="benjamin2"></Button>
+         <Button title={"benjamin"}
+            onButtonClick={(param)=>{
+            console.log("j'ai ckiqué sur benjamin", param)
+         }}
+      />
+
+      <Button title="ok"
+       onButtonClick={(param)=>{
+            console.log("j'ai ckiqué sur ok", param)
+         }}></Button>
+
       <Button title="cancel"></Button>
-      <Button></Button>
+
+      
     </div>
   );
 }
