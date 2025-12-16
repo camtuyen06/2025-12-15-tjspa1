@@ -1,0 +1,31 @@
+import React, { useEffect, useState } from "react";
+import styles from "./FlexH3Grow.module.css";
+
+interface IFlexH3GrowProps {
+  children?: React.ReactNode;
+}
+
+interface IFlexH3GrowState {
+  value?: undefined;
+}
+
+const FlexH3Grow: React.FC<IFlexH3GrowProps> = ({
+  children = "FlexH3Grow Component",
+}) => {
+  const [state, setstate] = useState<IFlexH3GrowState>({});
+  useEffect(() => {
+    //mount
+
+    return () => {
+      //dismount
+    };
+  }, []);
+
+  return (
+    <div className={styles.FlexH3Grow} data-testid="FlexH3Grow">
+      {children}
+    </div>
+  );
+};
+
+export default FlexH3Grow;

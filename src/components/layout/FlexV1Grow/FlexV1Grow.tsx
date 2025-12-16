@@ -1,0 +1,31 @@
+import React, { useEffect, useState } from "react";
+import styles from "./FlexV1Grow.module.css";
+
+interface IFlexV1GrowProps {
+  children?: React.ReactNode;
+}
+
+interface IFlexV1GrowState {
+  value?: undefined;
+}
+
+const FlexV1Grow: React.FC<IFlexV1GrowProps> = ({
+  children = "FlexV1Grow Component",
+}) => {
+  const [state, setstate] = useState<IFlexV1GrowState>({});
+  useEffect(() => {
+    //mount
+
+    return () => {
+      //dismount
+    };
+  }, []);
+
+  return (
+    <div className={styles.FlexV1Grow} data-testid="FlexV1Grow">
+      {children}
+    </div>
+  );
+};
+
+export default FlexV1Grow;
