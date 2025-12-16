@@ -6,13 +6,14 @@ import Header from "../components/ui/Header/Header";
 import FlexH3Grow from "../components/layout/FlexH3Grow/FlexH3Grow";
 import { emptyMeme, MemeSVGViewer, type ImageInterface } from "orsys-tjs-meme";
 import { useEffect, useState } from "react";
+import { REST_API_RESSOUCES, REST_API_URL } from "../config/constantes";
 type TImages=Array<ImageInterface>
 
 
 const App: React.FC = () => {
   const [images,  setImages] = useState<TImages>([])
   useEffect(() => {
-      fetch('http://localhost:5629/images').then(r=>r.json()).then(imgs=>setImages(imgs))
+      fetch(`${REST_API_URL}${REST_API_RESSOUCES.images}`).then(r=>r.json()).then(imgs=>setImages(imgs))
   },[])
 
   return (
