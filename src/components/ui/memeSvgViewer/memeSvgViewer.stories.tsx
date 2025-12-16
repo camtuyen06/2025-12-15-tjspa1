@@ -1,11 +1,11 @@
 /* eslint-disable */
-import memeSvgViewer from './memeSvgViewer';
+import MemeSvgViewer from './MemeSvgViewer';
 
 export default {
-  title: "memeSvgViewer",
+  title: "MemeSvgViewer",
 };
 
-export const Default = () => <memeSvgViewer />;
+export const Default = () => <MemeSvgViewer />;
 
 Default.story = {
   name: 'default',
