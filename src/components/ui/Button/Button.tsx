@@ -39,8 +39,7 @@ const Button=({children,onButtonClick,bgColor="red", type="button"}:IButtonProps
         }}
     >
         {children}
-
-        {isCliked.toString()}
+        
     </button>
     );
 };
