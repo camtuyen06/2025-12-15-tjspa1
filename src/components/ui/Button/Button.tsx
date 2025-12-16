@@ -28,7 +28,7 @@ const Button=({children,onButtonClick,bgColor="red", type="button"}:IButtonProps
     return (
     <button 
         type ={type}
-        className={style.Button}
+        className={style.Button +(isCliked?" " + style.clicked: "")}
         style={{backgroundColor:bgColor}}
         onClick={() => {
             //traitement event
