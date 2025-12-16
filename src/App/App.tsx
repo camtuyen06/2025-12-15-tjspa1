@@ -4,12 +4,20 @@ import MemeForm from "../components/functional/MemeForm/MemeForm";
 import Footer from "../components/ui/Footer/Footer";
 import Header from "../components/ui/Header/Header";
 import FlexH3Grow from "../components/layout/FlexH3Grow/FlexH3Grow";
-import MemeSvgViewer from "../components/ui/MemeSvgViewer/MemeSvgViewer";
-import { emptyMeme, MemeSVGViewer } from "orsys-tjs-meme";
+import { emptyMeme, MemeSVGViewer, type ImageInterface } from "orsys-tjs-meme";
+import { useEffect, useState } from "react";
+type TImages=Array<ImageInterface>
 
 
 const App: React.FC = () => {
+  const [images,  setImages] = useState<TImages>([])
+  useEffect(() => {
+      fetch('http://localhost:5629/images').then(r=>r.json()).then(imgs=>setImages(imgs))
+  },[])
+
   return (
+    <>
+    <div>images:{JSON.stringify(images)}</div>
     <div className="App">
       <FlexH3Grow>
         <Header />
@@ -21,6 +29,7 @@ const App: React.FC = () => {
         <Footer />
       </FlexH3Grow>
     </div>
+    </>
   );
 };
 
