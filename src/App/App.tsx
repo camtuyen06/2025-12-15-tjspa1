@@ -11,9 +11,14 @@ type TImages=Array<ImageInterface>
 
 
 const App: React.FC = () => {
+  const [current, setcurrent] = useState(emptyMeme);
+ 
+
   const [images,  setImages] = useState<TImages>([])
   useEffect(() => {
-      fetch(`${REST_API_URL}${REST_API_RESSOUCES.images}`).then(r=>r.json()).then(imgs=>setImages(imgs))
+      fetch(`${REST_API_URL}${REST_API_RESSOUCES.images}`)
+      .then(r=>r.json())
+      .then(imgs=>setImages(imgs))
   },[])
 
   return (
@@ -24,8 +29,9 @@ const App: React.FC = () => {
         <Header />
         <Navbar />
         <FlexV1Grow>
-          <MemeSVGViewer meme={emptyMeme} image={undefined} basePath=""/>
-          <MemeForm />
+          <MemeSVGViewer meme={current} image={images.find(item=>item.id===current.imageId)} basePath=""/>
+          <MemeForm meme={current} images={images} onMemeChange={setcurrent}/>
+
         </FlexV1Grow>
         <Footer />
       </FlexH3Grow>
