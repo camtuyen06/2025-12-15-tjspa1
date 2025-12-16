@@ -1,10 +1,10 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import style from './Button.module.css';
 
 //interface pour verifier le type
 //remarque <div> c'est children
 interface IButtonProps{
-    children:string|React.ReactElement|Array<string|React.ReactElement>;
+    children:string|React.ReactNode|Array<string|React.ReactNode>;
     onButtonClick?:()=>void;
     bgColor?: string;
     type?:"button"|"submit"|"reset";
@@ -17,6 +17,14 @@ const Button=({children,onButtonClick,bgColor="red", type="button"}:IButtonProps
     //console.log(style);
     //console.trace(children);
     const [isCliked, setisCliked] = useState(false);
+    useEffect(() => {
+      //componetDidMount
+      setTimeout(()=>{
+        setisCliked(false);
+      },200);
+    }, [isCliked]);  //observe la valeur
+
+
     return (
     <button 
         type ={type}

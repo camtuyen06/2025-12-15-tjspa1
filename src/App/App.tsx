@@ -5,7 +5,7 @@ const App: React.FC<undefined> = () => {
   const [counter, setCounter] = useState(-100);
   useEffect(() => {
     //componentDidMount
-    console.log('didMount');
+    console.log('didMount',counter);
     setCounter(0);
     
     return () => {
@@ -13,9 +13,11 @@ const App: React.FC<undefined> = () => {
     };
   }, []);
   useEffect(() => {
-    console.log('counter effect',counter);
+    console.log('counter effect modif',counter);
   }, [counter]);
 
+
+  //useEffect n'est plus utilisé , remplacé par hook
   return (
     <div style={{ textAlign: "center" }}>
       valeur de counter :{counter}
