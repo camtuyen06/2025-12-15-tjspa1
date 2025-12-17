@@ -5,6 +5,7 @@ import FlexH3Grow from "../components/layout/FlexH3Grow/FlexH3Grow";
 import { Route, Routes, useParams } from "react-router";
 import Home from "../pages/Home/Home";
 import Editor from "../pages/Editor/Editor";
+import Thumbnail from "../pages/Thumbnail/Thumbnail";
 
 
 const App: React.FC = () => {
@@ -16,6 +17,7 @@ const App: React.FC = () => {
           <Navbar />
           <Routes>
             <Route path="/" Component={Home}/>
+            <Route path="/thumbnail" Component={Thumbnail}/>
             <Route path="/editor" Component={Editor} />
             <Route path="/editor/:id" Component={Editor} />
           </Routes>
