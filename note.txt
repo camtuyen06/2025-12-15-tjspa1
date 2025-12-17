@@ -20,7 +20,7 @@ mdp: Bidon130663@1
 compte utilisateur : camtuyen06
 
 
-sur mon github j'ai récuperer app de alexandre, faire un point ça affiche editeur comme dans Visual Studio, ajouter reac grapk pour voir les état avancement
+sur mon github j'ai récuperer app de alexandre, faire un point ça affiche editeur comme dans Visual Studio, ajouter git graph pour voir les état avancement
 
 
 yarn add react-router   //yarn add c'est comme installe
