@@ -1,12 +1,13 @@
 
 tsrafce  : creer des squelette
-
-
-http://localhost:5173/
+ clique sur dernier un classe(Ctrl+espace) pour faire import automatique ou snipest
 
 http://localhost:5173/
 
+http://localhost:5173/
 
+
+Alexandre DESORBAIX : 06 64 27 63 60   (envoyer lui des sms si besoin)
 formateur sur Github
 https://github.com/champix56
 
