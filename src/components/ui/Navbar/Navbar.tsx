@@ -25,6 +25,7 @@ const Navbar: React.FC<INavbarProps> = ({
             <Link  className="nav-link" to="/thumbnail">Thumbnail</Link> 
             <Link className="nav-link" to="/editor">new</Link> 
             <Link className="nav-link" to="/editor/1">Edit:1</Link>
+            <Link className="nav-link" to="/editor/123">Edit:123</Link>
           </Nav>
         </Container>
       </NavBar> 

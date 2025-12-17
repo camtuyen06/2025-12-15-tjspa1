@@ -19,6 +19,6 @@ mdp: Bidon130663@1
 compte utilisateur : camtuyen06
 
 
-yarn add react-router
+yarn add react-router   //yarn add c'est comme installe
 
 yarn component:page Home Thumbnail Editor   (demande de creer des repertoire)
