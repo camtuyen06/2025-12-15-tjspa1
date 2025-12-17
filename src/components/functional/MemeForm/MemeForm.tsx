@@ -1,39 +1,29 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import styles from "./MemeForm.module.css";
-import type { ImageInterface, MemeInterface } from "orsys-tjs-meme";
 import Button from "../../ui/Button/Button";
+import type { IMemeFormProps } from "./MemeForm.interface";
 
 //const initialState = {};
-interface IMemeFormProps {
-  images: Array<ImageInterface>;
-  meme: MemeInterface;
-  onMemeChange:(meme:MemeInterface)=>void;
-}
-const MemeForm: React.FC<IMemeFormProps> = ({ images, meme, onMemeChange }) => {
- // const [current, setcurrent] = useState(meme);
-const current=meme;
-const setcurrent=onMemeChange;
-  // const [state, setstate] = useState(initialState);
-  // useEffect(() => {
-  //   console.log("MemeForm mounted");
-  // }, []);
+
+const MemeForm: React.FC<IMemeFormProps> = ({style, images, meme, onMemeChange }) => {
+
   const onNumberChange = (
     evt: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>
   ) => {
-    setcurrent({ ...current, [evt.target.name]: parseInt(evt.target.value) });
+    onMemeChange({...meme, [evt.target.name]: parseInt(evt.target.value) });
   };
   const onStringChange = (evt: React.ChangeEvent<HTMLInputElement>) => {
-    setcurrent({ ...current, [evt.target.name]: evt.target.value });
+    onMemeChange({...meme, [evt.target.name]: evt.target.value });
   };
   const onCheckChange = (evt: React.ChangeEvent<HTMLInputElement>) => {
-    setcurrent({ ...current, [evt.target.name]: evt.target.checked });
+    onMemeChange({...meme, [evt.target.name]: evt.target.checked });
   };
   return (
-    <div className={styles.MemeForm} data-testid="MemeForm">
+    <div className={styles.MemeForm} data-testid="MemeForm" style={style}>
       <form
         onSubmit={(evt) => {
           evt.preventDefault();
-          onMemeChange(current);
+          //onMemeChange(current);
         }}
       >
         <label htmlFor="titre">
@@ -43,7 +33,7 @@ const setcurrent=onMemeChange;
         <input
           name="titre"
           id="titre"
-          value={current.titre}
+          value={meme.titre}
           onChange={onStringChange}
         />
         <hr />
@@ -54,7 +44,7 @@ const setcurrent=onMemeChange;
         <select
           name="imageId"
           id="image"
-          value={current.imageId}
+          value={meme.imageId}
           onChange={onNumberChange}
         >
           <option value="-1">No image</option>
@@ -73,7 +63,7 @@ const setcurrent=onMemeChange;
           name="text"
           id="text"
           type="text"
-          value={current.text}
+          value={meme.text}
           onChange={onStringChange}
         />
         <br />
@@ -85,7 +75,7 @@ const setcurrent=onMemeChange;
           name="x"
           id="x"
           type="number"
-          value={current.x}
+          value={meme.x}
           onChange={onNumberChange}
         />
         <label htmlFor="y">
@@ -96,7 +86,7 @@ const setcurrent=onMemeChange;
           name="y"
           id="y"
           type="number"
-          value={current.y}
+          value={meme.y}
           onChange={onNumberChange}
         />
         <hr />
@@ -105,7 +95,7 @@ const setcurrent=onMemeChange;
         <label htmlFor="color">
           <h2 style={{ display: "inline" }}>color :</h2>
         </label>
-        <input name="color" id="color" type="color" value={current.color} onChange={onStringChange} />
+        <input name="color" id="color" type="color" value={meme.color} onChange={onStringChange} />
         <br />
         <label htmlFor="fontSize">
           <h2 style={{ display: "inline" }}>font-size :</h2>
@@ -116,7 +106,7 @@ const setcurrent=onMemeChange;
           id="fontSize"
           type="number"
           min="0"
-          value={current.fontSize}
+          value={meme.fontSize}
           onChange={onNumberChange}
         />
         px
@@ -132,14 +122,14 @@ const setcurrent=onMemeChange;
           min="100"
           step="100"
           max="900"
-          value={current.fontWeight} onChange={onStringChange}
+          value={meme.fontWeight} onChange={onStringChange}
         />
         <br />
         <input
           name="underline"
           id="underline"
           type="checkbox"
-          checked={current.underline}
+          checked={meme.underline}
           onChange={onCheckChange}
         />
         &nbsp;
@@ -155,7 +145,7 @@ const setcurrent=onMemeChange;
           name="italic"
           id="italic"
           type="checkbox"
-          checked={current.italic}
+          checked={meme.italic}
           onChange={onCheckChange}
 
         />
