@@ -2,6 +2,7 @@ import React from "react";
 import styles from "./Navbar.module.css";
 import { Container, Nav, Navbar as NavBar } from "react-bootstrap";
 import 'bootstrap/dist/css/bootstrap.css'
+import { Link } from "react-router";
 
 
 
@@ -19,11 +20,11 @@ const Navbar: React.FC<INavbarProps> = ({
     <div className={styles.Navbar} style={parentStyle} data-testid="Navbar">
        <NavBar bg="dark" data-bs-theme="dark">
         <Container>
-          <NavBar.Brand href="#home">Home</NavBar.Brand>
+          <Link className="navbar-brand" to="/">Home</Link>
           <Nav className="me-auto">
-            <Nav.Link href="#home">Thumbnail</Nav.Link> 
-            <Nav.Link href="#features">new</Nav.Link> 
-            <Nav.Link href="#pricing">Edit:1</Nav.Link>
+            <Link  className="nav-link" to="/thumbnail">Thumbnail</Link> 
+            <Link className="nav-link" to="/editor">new</Link> 
+            <Link className="nav-link" to="/editor/1">Edit:1</Link>
           </Nav>
         </Container>
       </NavBar> 
