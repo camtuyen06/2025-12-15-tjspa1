@@ -1,0 +1,24 @@
+
+tsrafce  : creer des squelette
+
+
+http://localhost:5173/
+
+http://localhost:5173/
+
+
+formateur sur Github
+https://github.com/champix56
+
+https://github.com/champix56/2025-12-15-tjspa1
+
+
+https://github.com/camtuyen06/2025-12-15-tjspa1
+tcttran06@gmail.com
+mdp: Bidon130663@1
+compte utilisateur : camtuyen06
+
+
+yarn add react-router
+
+yarn component:page Home Thumbnail Editor   (demande de creer des repertoire)
