@@ -22,3 +22,7 @@ compte utilisateur : camtuyen06
 yarn add react-router   //yarn add c'est comme installe
 
 yarn component:page Home Thumbnail Editor   (demande de creer des repertoire)
+
+layout: que pour affichage disposition mais ne fait rien
+ui: un composant
+fonctional: faire des actions

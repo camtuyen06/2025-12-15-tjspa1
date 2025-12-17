@@ -6,8 +6,8 @@ import { MemeSVGViewer } from "orsys-tjs-meme";
 
 const Thumbnail:React.FC = () => {
   //const memes=useSelector((s:RootState)=> s.ressources.memes);
-  //const images=useSelector(())
-  const ressources=useSelector((s:RootState)=>s.ressources);
+  //const images=useSelector((img:RootState)=> img.ressources.images);
+  const ressources=useSelector((s:RootState)=>s.ressources); //ici on prend tous il y memes et images
 
   return (
    <>
