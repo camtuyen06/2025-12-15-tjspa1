@@ -20,6 +20,9 @@ mdp: Bidon130663@1
 compte utilisateur : camtuyen06
 
 
+sur mon github j'ai récuperer app de alexandre, faire un point ça affiche editeur comme dans Visual Studio, ajouter reac grapk pour voir les état avancement
+
+
 yarn add react-router   //yarn add c'est comme installe
 
 yarn component:page Home Thumbnail Editor   (demande de creer des repertoire)
@@ -27,3 +30,5 @@ yarn component:page Home Thumbnail Editor   (demande de creer des repertoire)
 layout: que pour affichage disposition mais ne fait rien
 ui: un composant
 fonctional: faire des actions
+
+
